@@ -1,0 +1,156 @@
+
+1.ROTATION GAME:
+
+Program:
+
+def RightRotate(a, n, k):
+     k = k % n;
+ 
+    for i in range(0, n):
+ 
+        if(i < k):
+ 
+            # Printing rightmost
+            # kth elements
+            print(a[n + i - k], end = " ");
+ 
+        else:
+ 
+            # Prints array after
+            # 'k' elements
+            print(a[i - k], end = " ");
+ 
+    print("\n");
+Array = [ 1, 2, 3, 4, 5 ];
+N = len(Array);
+K = 2;
+     
+RightRotate(Array, N, K);
+ 
+Output:
+
+            4 5 1 2 3 
+
+
+2.GOOD PAIR:
+
+Program:
+
+import java.io.*;
+class pairs {
+  
+  
+    static boolean chkPair(int A[], int size, int x)
+    {
+        for (int i = 0; i < (size - 1); i++) {
+            for (int j = (i + 1); j < size; j++) {
+                if (A[i] + A[j] == x) {
+                    return true;
+                }
+            }
+        }
+  
+        return false;
+    }
+  
+    public static void main(String[] args)
+    {
+  
+        int A[] = { 0, -1, 2, -3, 1 };
+        int x = -2;
+        int size = A.length;
+  
+        if (chkPair(A, size, x)) {
+            System.out.println("Yes");
+        }
+        else {
+            System.out.println("No");
+        }
+    }
+}
+  
+Input
+A = [1,2,3,4]
+B = 7
+
+Output:1
+
+
+3.MAX AND MIN OF ARRAYS:
+Program:
+
+def findMinAndMax(nums):
+     for i in range(1, len(nums)):
+ 
+         if nums[i] > max:
+            max = nums[i]
+         elif nums[i] < min:
+            min = nums[i]
+ 
+    print('The minimum element in the list is', min)
+    print('The maximum element in the list is', max)
+ 
+ 
+if __name__ == '__main__':
+ 
+    nums = [5, 7, 2, 4, 9, 6]
+    findMinAndMax(nums)
+ 
+Output:
+ 
+The minimum array element is 2
+The maximum array element is 9
+
+ 
+4.REVERSE AN ARRAY:
+
+Program:
+
+#include <stdio.h>
+#include <stdlib.h>
+#define n 6
+int main(){
+    int arr[n] = {9, 8, 7, 2, 4, 3};
+    int temp;
+    for(int i = 0; i<n/2; i++){
+        temp = arr[i];
+        arr[i] = arr[n-i-1];
+        arr[n-i-1] = temp;
+    }
+    for(int i = 0; i < n; i++){
+        printf("%d,", arr[i]);
+    }
+}
+
+output: 3 4 2 7 8 9
+
+
+5.SEARCH ELEMENT:
+
+Program:
+
+  public static void main(String[] args) {
+
+    int[] num = {1, 2, 3, 4, 5};
+    int toFind = 3;
+    boolean found = false;
+
+    for (int n : num) {
+      if (n == toFind) {
+        found = true;
+        break;
+      }
+    }
+    
+    if(found)
+      System.out.println(toFind + " is found.");
+    else
+      System.out.println(toFind + " is not found.");
+  }
+}
+
+Output:
+ if to find is 10 
+ then 10 is not found
+ if to find is 3
+ the 3 is found
